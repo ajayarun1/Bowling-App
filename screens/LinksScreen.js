@@ -23,8 +23,9 @@ export default function LinksScreen() {
   const [conv4, sto4] = React.useState('14th line');
   const [conv5, sto5] = React.useState('15th line');
 
+
   //How do I allow for different inputs into each table slot?
-  var HeadTable = ['Game', 'Score', 'Frequency # (TYPE NUMBER)', 'Conversion # (TYPE NUMBER)', 'Conversion Rate']
+  var HeadTable = ['Game', 'Score', 'Frequency # (TYPE NUMBER)', 'Conversion # (TYPE NUMBER)', 'Conversion Rate (If mild split, decrease 66%']
   var DataTable = [
     ['1', '170', '25', '17', '68%'],
     ['2', '240', '10', '6', '10%'],
@@ -49,6 +50,8 @@ export default function LinksScreen() {
   { DataTable[3][3] = conv4 }
   { DataTable[4][3] = conv5 }
 
+
+
   { DataTable[0][4] = Math.round((DataTable[0][2] / DataTable[0][3]) * 100) + '%' }
   { DataTable[1][4] = Math.round((DataTable[1][2] / DataTable[1][3]) * 100) + '%' }
   { DataTable[2][4] = Math.round((DataTable[2][2] / DataTable[2][3]) * 100) + '%' }
@@ -61,77 +64,105 @@ export default function LinksScreen() {
         <Rows data={DataTable} textStyle={styles.TableText} />
       </Table>
       <TextInput
-        style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        style={{ height: 20, borderColor: 'black', borderWidth: 1 }}
         onChangeText={text => onChangeText(text)}
         value={value}
       />
       <TextInput
-        style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        style={{ height: 20, borderColor: 'black', borderWidth: 1 }}
+        placeholder="Line 2"
+        placeholderTextColor= '#00008b'
         onChangeText={text => onChangeTextTwo(text)}
         valueTwo={valueTwo}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 3"
+        placeholderTextColor= '#00008b'
         onChangeText={text => onChangeTextThree(text)}
         valueThree={valueThree}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 4"
+        placeholderTextColor= '#00008b'
         onChangeText={text => onChangeTextFour(text)}
         valueFour={valueFour}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 5"
+        placeholderTextColor= '#00008b'
         onChangeText={text => onChangeTextFive(text)}
         valueFive={valueFive}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 6"
+        placeholderTextColor= '#00008b'
         onChangeText={text => oct(text)}
         freq={freq}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 7"
+        placeholderTextColor= '#00008b'
         onChangeText={text => oct2(text)}
         freq2={freq2}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 8"
+        placeholderTextColor= '#00008b'
         onChangeText={text => oct3(text)}
         freq={freq3}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 9"
+        placeholderTextColor= '#00008b'
         onChangeText={text => oct4(text)}
         freq4={freq4}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 10"
+        placeholderTextColor= '#00008b'
         onChangeText={text => oct5(text)}
         freq5={freq5}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 11"
+        placeholderTextColor= '#00008b'
         onChangeText={text => sto(text)}
         conv={conv}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 12"
+        placeholderTextColor= '#00008b'
         onChangeText={text => sto2(text)}
         conv2={conv2}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 13"
+        placeholderTextColor= '#00008b'
         onChangeText={text => sto3(text)}
         conv3={conv3}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 14"
+        placeholderTextColor= '#00008b'
         onChangeText={text => sto4(text)}
         conv4={conv4}
       />
       <TextInput
         style={{ height: 20, borderColor: 'gray', borderWidth: 1 }}
+        placeholder="Line 15"
+        placeholderTextColor= '#00008b'
         onChangeText={text => sto5(text)}
         conv5={conv5}
       />
